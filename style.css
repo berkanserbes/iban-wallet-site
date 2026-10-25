@@ -15,8 +15,9 @@
   color-scheme: light;
 }
 
+/* Dark theme: follows the system, or the toggle (data-theme) when set */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #0b1120;
     --bg-alt: #0f1a33;
     --surface: #111827;
@@ -32,6 +33,23 @@
     --shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
     color-scheme: dark;
   }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0b1120;
+  --bg-alt: #0f1a33;
+  --surface: #111827;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --border: #1f2937;
+  --primary: #3b82f6;
+  --primary-strong: #60a5fa;
+  --primary-soft: #172554;
+  --primary-soft-text: #93c5fd;
+  --glow: rgba(59, 130, 246, 0.22);
+  --frame: linear-gradient(145deg, #64748b, #1e293b 40%, #475569 65%, #0f172a);
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
 }
 
 * {
@@ -151,6 +169,39 @@ a {
 
 .nav-links .lang a {
   padding: 4px 10px;
+}
+
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin-left: 8px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--text);
+  background: var(--bg-alt);
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.theme-toggle .sun,
+:root[data-theme="dark"] .theme-toggle .moon {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle .sun {
+  display: block;
 }
 
 @media (max-width: 720px) {
