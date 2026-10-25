@@ -529,59 +529,6 @@ section {
   background: var(--primary-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / 12px no-repeat;
 }
 
-/* Privacy band */
-
-.privacy-band {
-  background: linear-gradient(135deg, #1e3a8a, #2563eb 55%, #3b82f6);
-  color: #ffffff;
-  border-radius: 28px;
-  padding: 56px 40px;
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.privacy-band h2 {
-  font-size: clamp(28px, 4vw, 40px);
-  line-height: 1.15;
-  margin: 0 0 12px;
-}
-
-.privacy-band p {
-  color: rgba(255, 255, 255, 0.85);
-  margin: 0 0 20px;
-}
-
-.privacy-band .link {
-  color: #ffffff;
-  font-weight: 600;
-}
-
-.privacy-points {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.privacy-points div {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 16px;
-  padding: 16px;
-}
-
-.privacy-points strong {
-  display: block;
-  font-size: 17px;
-  margin-bottom: 4px;
-}
-
-.privacy-points span {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 15px;
-}
-
 /* FAQ */
 
 details {
@@ -621,9 +568,9 @@ details p {
   color: var(--muted);
 }
 
-/* Support */
+/* Panels (privacy, support) */
 
-.support {
+.panel {
   position: relative;
   overflow: hidden;
   display: grid;
@@ -636,7 +583,7 @@ details p {
   padding: 48px;
 }
 
-.support::before {
+.panel::before {
   content: "";
   position: absolute;
   top: -160px;
@@ -647,28 +594,47 @@ details p {
   pointer-events: none;
 }
 
-.support-intro {
+.panel-intro {
   position: relative;
 }
 
-.support h2 {
+.panel h2 {
   font-size: clamp(28px, 4vw, 38px);
   line-height: 1.15;
   letter-spacing: -0.01em;
   margin: 16px 0 12px;
 }
 
-.support-intro p {
+.panel-intro p {
   color: var(--muted);
   margin: 0 0 12px;
 }
 
-.support-intro .support-meta {
+.panel-intro .panel-meta {
   font-size: 15px;
   margin: 0;
 }
 
-.support-options {
+.panel-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.panel-link svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.15s;
+}
+
+.panel-link:hover svg {
+  transform: translateX(2px);
+}
+
+.panel-options {
   position: relative;
   display: grid;
   gap: 10px;
@@ -686,6 +652,10 @@ details p {
   color: var(--text);
   text-decoration: none;
   transition: border-color 0.15s, transform 0.15s;
+}
+
+div.option {
+  grid-template-columns: 44px 1fr;
 }
 
 a.option:hover {
@@ -796,8 +766,7 @@ footer a:hover {
   }
 
   .hero .container,
-  .show,
-  .privacy-band {
+  .show {
     grid-template-columns: 1fr;
   }
 
@@ -860,11 +829,7 @@ footer a:hover {
     text-align: left;
   }
 
-  .privacy-band {
-    padding: 40px 24px;
-  }
-
-  .support {
+  .panel {
     grid-template-columns: 1fr;
     gap: 28px;
     padding: 32px 20px;
@@ -876,8 +841,7 @@ footer a:hover {
     padding: 64px 0;
   }
 
-  .features,
-  .privacy-points {
+  .features {
     grid-template-columns: 1fr;
   }
 
