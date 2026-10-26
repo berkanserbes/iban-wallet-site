@@ -100,7 +100,11 @@ This repository holds the IBAN Wallet website, which is served with GitHub Pages
 ├── en/                 # English home page and privacy policy
 ├── style.css           # Styles for every page, light and dark theme
 ├── theme.js            # Light/dark theme toggle
+├── 404.html            # Page not found (Turkish and English)
+├── sitemap.xml         # Page list with language versions, for search engines
 ├── icon.svg            # App icon
+├── favicon-32.png      # PNG favicon for browsers without SVG icons
+├── apple-touch-icon.png # Home screen icon on iPhone and iPad
 ├── img/                # App screenshots used on the site (tr, en)
 └── readme/             # Images used only in the READMEs
 ```

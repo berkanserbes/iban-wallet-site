@@ -726,6 +726,73 @@ a.option:hover .option-arrow {
   margin: 0 0 24px;
 }
 
+/* 404 page */
+
+.notfound {
+  text-align: center;
+  padding-top: 96px;
+  padding-bottom: 32px;
+}
+
+.notfound .notfound-code {
+  font-size: clamp(96px, 18vw, 160px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin: 0 0 16px;
+  background: linear-gradient(120deg, #5b9bff, var(--primary) 55%, #1e40af);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.notfound h1 {
+  font-size: clamp(28px, 4vw, 36px);
+  margin: 0 0 8px;
+}
+
+.notfound p {
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+.notfound .notfound-en {
+  font-size: 15px;
+}
+
+.notfound-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.notfound-actions a {
+  border-radius: 14px;
+  padding: 12px 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.notfound-primary {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.notfound-primary:hover {
+  background: var(--primary-strong);
+}
+
+.notfound-secondary {
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.notfound-secondary:hover {
+  background: var(--bg-alt);
+}
+
 /* Footer */
 
 footer {

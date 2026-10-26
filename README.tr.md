@@ -100,7 +100,11 @@ Bu repo, GitHub Pages ile yayınlanan IBAN Wallet web sitesini içerir. Uygulama
 ├── en/                 # İngilizce ana sayfa ve gizlilik politikası
 ├── style.css           # Tüm sayfaların stilleri, açık ve koyu tema
 ├── theme.js            # Açık/koyu tema düğmesi
+├── 404.html            # Sayfa bulunamadı (Türkçe ve İngilizce)
+├── sitemap.xml         # Arama motorları için dil sürümleriyle sayfa listesi
 ├── icon.svg            # Uygulama simgesi
+├── favicon-32.png      # SVG simge desteklemeyen tarayıcılar için PNG favicon
+├── apple-touch-icon.png # iPhone ve iPad ana ekran simgesi
 ├── img/                # Sitede kullanılan ekran görüntüleri (tr, en)
 └── readme/             # Sadece README'lerde kullanılan görseller
 ```
